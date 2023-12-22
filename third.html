@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Item management System</title>
 </head>
 <body>
-    <div style="border: 2px solid black;">
+    <h3>Item management System</h3>
     <div>
-        <h6>Enter Number to find Factorial: </h6>
-        <input type="number" placeholder="Enter number" id="number"/>
-        <button onclick="calculateFactorial()">Calculate</button>
+        <input id="itemField" type="text" placeholder="Enter an item"/>
+
+        <button onclick="main()">Submit</button>
     </div>
     <div>
         <table id="dataTable">
             <thead>
-                <th>User Input</th>
-                <th>Factorial</th>
+                <th>S.No</th>
+                <th>Item</th>
+                <th>Action</th>
             </thead>
             <tbody id="tBodyData">
                <!-- data will go here via JS -->
@@ -24,9 +25,9 @@
             
         </table>
     </div>
-    </div>
 
-    <script src="./second.js"></script>
+
+    <script src="./third.js"></script>
 
 </body>
 </html>

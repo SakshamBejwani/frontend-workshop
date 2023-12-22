@@ -12,11 +12,18 @@ function submit() {
     
     console.log("Password", passwordValue);
 
+    var table = document.getElementById("dataTable")
+    var tableBody = document.getElementById("tBodyData")
 
-    if(emailValue=="admin@admin.com" && passwordValue=="123")
-    {
-        alert("Logged in as admin!");
-    }
+    var row = tableBody.insertRow();
+    var col1 = row.insertCell(0);
+    var col2 = row.insertCell(1);
+
+    col1.innerHTML = emailValue;
+    col2.innerHTML = passwordValue;
+
+    document.getElementById("emailField").value = "";
+    document.getElementById("passwordField").value = ""
 }
 
 function calculate() {

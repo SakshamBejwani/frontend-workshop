@@ -1,6 +1,8 @@
 //items goes into array
 let itemList = [] 
 
+
+
 function addItem(){
     var item = document.getElementById('itemField').value;
 
@@ -10,6 +12,11 @@ function addItem(){
     document.getElementById('itemField').value = '';
 
     console.log(itemList);
+}
+
+function removeItem(index){
+    itemList.splice(index, 1);
+    updateTable();
 }
 
 function updateTable() {
@@ -28,8 +35,11 @@ function updateTable() {
 
         col1.innerHTML = index+1;
         col2.innerHTML = item;
-        col3.innerHTML = `<button>Delete</button>`
+        col3.innerHTML = `<button onClick="removeItem(${index})">Delete</button>`
     });
+
+    document.getElementById('listLength').innerHTML = itemList.length;
+    console.log('List length', itemList.length)
    
 }
 
